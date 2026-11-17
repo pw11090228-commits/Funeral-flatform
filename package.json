@@ -1,0 +1,27 @@
+{
+  "name": "funeral-platform",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "npm@11.20.0",
+  "engines": {
+    "node": ">=24.3.0 <27.0.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace @funeral/web",
+    "dev:mobile": "npm run start --workspace @funeral/mobile",
+    "android:mobile": "npm run android --workspace @funeral/mobile",
+    "ios:mobile": "npm run ios --workspace @funeral/mobile",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "typescript": "6.0.3",
+    "vitest": "5.1.0"
+  }
+}
